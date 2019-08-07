@@ -8,11 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
 
-    @FindBy(xpath = "//a")
-    public WebElement element;
+    @FindBy(xpath = "oldLocator01")
+    public WebElement element01;
 
-    @FindBy(xpath = "//c")
-    public WebElement element2;
+    @FindBy(xpath = "oldLocator02")
+    public WebElement element02;
 
     protected ElementLocatorMapper elementLocatorMapper = new ElementLocatorMapper();
 

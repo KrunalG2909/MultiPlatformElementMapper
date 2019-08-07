@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePageElements {
 
-    @FindBy(xpath = "//b")
-    private WebElement element;
+    @FindBy(xpath = "updatedLocator01")
+    private WebElement element01;
 
-    @FindBy(xpath = "//d")
-    public WebElement element2;
+    @FindBy(xpath = "updatedLocator02")
+    public WebElement element02;
 }

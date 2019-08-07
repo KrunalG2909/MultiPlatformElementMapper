@@ -24,6 +24,7 @@ public class AnnotationMapper {
         Set<Field> fieldsAnnotatedWithObj1 = obj1Reflection.getFieldsAnnotatedWith(annotation);
         Set<Field> fieldsAnnotatedWithObj2 = obj2Reflection.getFieldsAnnotatedWith(annotation);
         fieldsAnnotatedWithObj1.stream().forEach(field -> {
+            System.out.println(field);
             Annotation existingAnnotation = field.getAnnotation(annotation);
             Field f = getField(field.getName(), fieldsAnnotatedWithObj2);
             Annotation annotationToSwap = f.getAnnotation(annotation);
@@ -41,9 +42,11 @@ public class AnnotationMapper {
     public void changeAnnotationValue(Annotation annotation, Annotation annotation1){
         Map<String, Object> memberValues = getAnnotationMemberValues(annotation);
         Map<String, Object> memberValuesToBeUpdated = getAnnotationMemberValues(annotation1);
+        System.out.println("Before swapping : " + memberValues.get("xpath"));
         memberValues.entrySet().stream().forEach(entry -> {
             memberValues.put(entry.getKey(), memberValuesToBeUpdated.get(entry.getKey()));
         });
+        System.out.println("After swapping  : " + memberValues.get("xpath"));
     }
 
     private Map<String, Object> getAnnotationMemberValues(Annotation annotation) {

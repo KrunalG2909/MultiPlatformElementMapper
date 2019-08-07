@@ -1,5 +1,6 @@
 package com.testvagrant.mpem.mapper;
 
+import com.testvagrant.mpem.pages.HomePage;
 import org.openqa.selenium.support.FindBy;
 
 public class ElementLocatorMapper {
